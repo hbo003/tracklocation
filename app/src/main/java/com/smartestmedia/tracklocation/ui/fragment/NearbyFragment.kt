@@ -183,6 +183,7 @@ class NearbyFragment : Fragment(R.layout.fragment_nearby), OnMapReadyCallback {
                 userLong = it.longitude.toString()
                 mMap?.animateCamera(CameraUpdateFactory.newLatLngZoom(initLocation, 10f))
             }
+
         } else {
             // Do not have permissions, request them now
             EasyPermissions.requestPermissions(
