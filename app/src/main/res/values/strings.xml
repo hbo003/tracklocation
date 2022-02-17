@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">tracklocation</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="admob_interstitial_id">ca-app-pub-2559564046715323/2204952129</string>
+    <string name="admob_app_id">ca-app-pub-2559564046715323~6653115980</string>>
+    <string name="google_maps_key">AIzaSyAiAir1uMz3NwJDd9vjIhqeEuTUgw2S7VM</string>
+    <string name="show_direction">Show Direction</string>
+    <string name="search_places">Search Places</string>
+    google_maps_key
+
+</resources>

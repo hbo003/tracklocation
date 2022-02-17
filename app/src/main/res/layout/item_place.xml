@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="place"
+            type="com.smartestmedia.tracklocation.ui.model.Place" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="30dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="false">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/image_item_salon_result_found"
+                android:layout_width="45dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/images_restaurent"
+                app:layout_constraintBottom_toTopOf="@id/show_direction"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/name_item_salon_result_found"
+                android:layout_width="wrap_content"
+                android:layout_height="21dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="5dp"
+                android:gravity="start"
+                android:text="@{place.name.toString()}"
+                android:textColor="@color/primaryv_color"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@id/image_item_salon_result_found"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="RedBox" />
+
+            <TextView
+                android:id="@+id/address_item_salon_result_found"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:layout_marginTop="1dp"
+                android:gravity="start"
+                android:text="@{place.closeoropen.toString()}"
+                android:textColor="@color/red_color"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/name_item_salon_result_found"
+                app:layout_constraintTop_toBottomOf="@id/name_item_salon_result_found"
+                tools:text="open" />
+
+            <TextView
+                android:id="@+id/star_item_salon_result_found"
+                android:layout_width="wrap_content"
+                android:layout_height="17dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="5dp"
+                android:paddingEnd="5dp"
+                android:text="@{place.closedAt.toString()}"
+                android:textColor="@color/gray"
+                android:textSize="13sp"
+                app:layout_constraintStart_toEndOf="@id/name_item_salon_result_found"
+                app:layout_constraintTop_toBottomOf="@id/name_item_salon_result_found"
+                tools:text="closed at 2" />
+
+
+            <TextView
+                android:id="@+id/openhour_item_salon_result_found"
+                android:layout_width="wrap_content"
+                android:layout_height="17dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="3dp"
+                android:gravity="center"
+                android:text="5 min by walk"
+                android:textColor="@color/gray"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="@id/image_item_salon_result_found"
+                app:layout_constraintStart_toStartOf="@id/name_item_salon_result_found"
+                app:layout_constraintTop_toBottomOf="@id/star_item_salon_result_found" />
+
+            <TextView
+                android:id="@+id/show_direction"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:background="@color/teal_700"
+                android:gravity="center"
+                android:text="@string/show_direction"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/image_item_salon_result_found" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>
