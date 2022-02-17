@@ -252,6 +252,7 @@ class NearbyFragment : Fragment(R.layout.fragment_nearby), OnMapReadyCallback {
             adRequest,
             object : InterstitialAdLoadCallback() {
 
+
                 override fun onAdFailedToLoad(adError: LoadAdError) {
                     mInterstitialAd = null
                     val error =
